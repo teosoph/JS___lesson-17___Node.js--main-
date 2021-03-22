@@ -1,17 +1,20 @@
 import _ from "lodash";
 
 function component() {
-  const element = document.createElement("div");
+  const elementH1Ref = document.body.querySelector("h1");
+  elementH1Ref.style.border = "  4px ridge blue";
+
+  const elementDiv = document.createElement("div");
 
   // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+  elementDiv.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  element.style.display = "     inline-block ";
-  element.style.width = "  300px ";
-  element.style.border = "  4px double black";
-  element.style.backgroundColor = "yellow";
+  elementDiv.style.display = "     inline-block ";
+  elementDiv.style.width = "  300px ";
+  elementDiv.style.border = "  4px double black";
+  elementDiv.style.backgroundColor = "yellow";
 
-  return element;
+  return elementDiv;
 }
 
 const childElementRef = document.querySelector(".gallery");
